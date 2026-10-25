@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wyoming Wildfires and Summer Weather, 2024</title>
+
+  <!-- Leaflet CSS and JavaScript -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:,">
+</head>
+<body>
+
+  <div id="panel">
+    <h1>Wyoming Wildfires and Summer Weather, 2024</h1>
+    <p class="intro">
+      Circles are the 13 largest Wyoming wildfires of summer 2024 (5,000+ acres), sized by acres burned.
+      Squares are weather stations, colored by how much rain fell from June to September compared to normal.
+      Dashed lines connect each fire to its nearest weather station.
+    </p>
+
+    <h2>Analysis: nearest weather station</h2>
+    <div id="summary"></div>
+
+    <table id="fireTable">
+      <thead>
+        <tr><th>Fire</th><th>Acres</th><th>Nearest station</th><th>Miles</th><th>Rain % of normal</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <p class="note">Click a row to zoom to that fire.</p>
+
+    <p class="sources">
+      Data: <a href="https://data-nifc.opendata.arcgis.com/" target="_blank">NIFC WFIGS Incident Locations</a>;
+      <a href="https://www.rcc-acis.org/" target="_blank">NOAA station data via RCC-ACIS</a> (1991-2020 normals).
+    </p>
+  </div>
+
+  <div id="map"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

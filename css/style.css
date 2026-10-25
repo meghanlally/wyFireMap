@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  height: 100vh;
+}
+
+/* Side panel with the analysis */
+#panel {
+  width: 380px;
+  padding: 14px 16px;
+  overflow-y: auto;
+  background-color: #fdfaf6;
+  border-right: 3px solid #b5401f;
+  box-sizing: border-box;
+}
+
+#panel h1 {
+  font-size: 20px;
+  color: #b5401f;
+  margin: 0 0 8px 0;
+}
+
+#panel h2 {
+  font-size: 16px;
+  margin: 14px 0 6px 0;
+}
+
+.intro, .note, .sources {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.note, .sources {
+  color: #555;
+}
+
+#summary {
+  font-size: 13px;
+  line-height: 1.4;
+  background-color: #fff3e8;
+  border-left: 4px solid #e8590c;
+  padding: 8px 10px;
+}
+
+#fireTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+#fireTable th {
+  background-color: #b5401f;
+  color: white;
+  padding: 5px;
+  text-align: left;
+}
+
+#fireTable td {
+  padding: 4px 5px;
+  border-bottom: 1px solid #ddd;
+}
+
+#fireTable tbody tr:hover {
+  background-color: #ffe8d6;
+  cursor: pointer;
+}
+
+/* Map fills the rest of the page */
+#map {
+  flex: 1;
+  height: 100vh;
+}
+
+/* Legend box */
+.legend {
+  background-color: white;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.legend i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  vertical-align: middle;
+  border: 1px solid #333;
+}
+
+.legend .circle {
+  border-radius: 50%;
+  background-color: #d62728;
+}
+
+/* Square station markers */
+.station-icon {
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  border: 2px solid #222;
+}
+
+.popup-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
